@@ -1,0 +1,163 @@
+:root {
+    --white: #fff;
+    --grey: #d2d2d2;
+    --lightgrey: #f7f7f7;
+    --mediumgrey: #ececec;
+
+    --darkgrey: #666666;
+}
+
+html {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+        Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol';
+    font-weight: 500;
+    font-size: 12px;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    background-color: var(--mediumgrey);
+    min-height: calc(100vh - 100px);
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    margin: 0;
+}
+
+.probable-pitchers {
+    width: 85%;
+    background-color: var(--white);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    display: grid;
+    grid-gap: 20px;
+    margin: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+}
+
+@media (max-width: 500px) {
+    .probable-pitchers {
+        width: 100%;
+    }
+}
+
+.game {
+    border: 1px solid var(--grey);
+}
+
+.game__header {
+    display: grid;
+    padding: 0.5rem 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--mediumgrey);
+    background-color: var(--lightgrey);
+}
+
+.game__info {
+    display: grid;
+    padding: 1rem 1rem 1.5rem 1rem;
+    grid-template-columns: 1fr 2fr 1fr;
+    justify-items: space-between;
+    background-color: var(--lightgrey);
+}
+
+.game__info-team {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.game__info-record {
+    margin: 0.5rem;
+    font-size: 0.7rem;
+    color: var(--darkgrey);
+}
+
+.game__info-details {
+    text-align: center;
+}
+
+.game__info-details-date {
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.game__info-details-venue {
+    font-size: 0.7rem;
+    color: var(--darkgrey);
+}
+
+.game__info-logo {
+    width: 3rem;
+    height: 3rem;
+}
+
+.game__matchup {
+    padding: 1rem 1.5rem;
+    height: 300px;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--white);
+}
+
+.game__matchup-pitcher-image {
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+}
+
+.game__matchup-pitcher-name {
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.game__matchup-pitcher-position,
+.game__matchup-pitcher-stats {
+    text-align: center;
+    font-size: 1rem;
+    color: var(--darkgrey);
+}
+
+.game__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 50px;
+    border-top: 1px solid var(--grey);
+}
+
+.link-button {
+    cursor: pointer;
+    background-color: var(--white);
+    border: none;
+}
+
+.link-button:hover {
+    background-color: var(--mediumgrey);
+}
+
+.game__buttons-gameday {
+    border-right: 1px solid var(--grey);
+}
